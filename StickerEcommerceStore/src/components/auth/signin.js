@@ -1,6 +1,7 @@
 import React from 'react';
-import { Fields } from 'redux-form';
+
 import SignInForm from './signinForm';
+import PageTitle from '../pageTitle';
 
 class SignIn extends React.Component {
 
@@ -11,6 +12,7 @@ class SignIn extends React.Component {
     render() {
         return(
             <div className='sign-in'>
+                <PageTitle className='sign-in__page-title' title='Login' />
                 <SignInForm onSubmit={this.onSubmit} className='sign-in__form' />
             </div>
         )
