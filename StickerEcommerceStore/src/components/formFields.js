@@ -11,3 +11,21 @@ export class FormField extends React.Component {
         )
     }
 }
+
+export class FormButton extends React.Component {
+    render() {
+        const { className, title, type, onClick, input } = this.props;
+        return(
+            <div className={`${className} form-button`}>
+                <button className={`form-button__button`} 
+                    type={type}
+                    {...input}
+                    onClick={onClick}
+                >
+                    {title}
+                </button>
+
+            </div>
+        )
+    }
+}
