@@ -21,6 +21,7 @@ class SignInForm extends React.Component {
                 placeholder='Password'
                 title='Password'
                 component={FormField} />
+                <div className='sign-in-form__line'></div>
                 <Field className='sing-in-form__login'
                 onClick={() => console.log('trying to submint')}
                 type='submit'

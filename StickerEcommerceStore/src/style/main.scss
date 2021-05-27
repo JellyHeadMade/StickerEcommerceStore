@@ -14,6 +14,8 @@ html {
 body {
     overflow-x: hidden;
     font-weight: normal;
+    font-family: 'Open Sans';
+    color: #808080;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -26,3 +28,4 @@ body {
 @import '/auth/signin.scss';
 @import '/auth/signup.scss';
 @import 'page-title.scss';
+@import 'form-fields.scss';
