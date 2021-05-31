@@ -12,7 +12,7 @@ import "./style/main.scss";
 import history from './history';
 
 import Layout from "./components/layout";
-import SignIn from './components/auth/signin';
+import Signin from './components/auth/signin';
 import SignUp from './components/auth/signup';
 
 function main() {
@@ -22,8 +22,8 @@ function main() {
         <Layout>
         
           <Switch>
-            <Route path='/' exact component={SignIn} />
-            <Route path='/singin' exact component={SignIn} />
+            <Route path='/' exact component={Signin} />
+            <Route path='/signin' exact component={Signin} />
             <Route path='/signup' exact component={SignUp} />
           </Switch>
         
