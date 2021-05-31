@@ -14,10 +14,10 @@ export class FormField extends React.Component {
 
 export class FormButton extends React.Component {
     render() {
-        const { className, title, type, onClick, input } = this.props;
+        const { className, title, type, onClick, input, gray } = this.props;
         return(
             <div className={`${className} form-button`}>
-                <button className={`form-button__button`} 
+                <button className={`form-button__button ${gray ? 'form-button__gray-button' : ''}`} 
                     type={type}
                     {...input}
                     onClick={onClick}
