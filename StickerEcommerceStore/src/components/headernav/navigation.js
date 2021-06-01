@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
+import { SET_HEADER_LINKS } from '../../actions/types';
+import { connect } from 'react-redux';
 
 class Navbar extends Component {
     render() {
         return(
             <div className='navbar'>
-
+                {this.props.navbarLinks.map((link, index) => {
+                    return(
+                        <a className='navbar__link' key={index} onClick={() => console.log('tryed to switch tabs. ')}>
+                            {link.title}
+                        </a>
+                    )
+                })}
             </div>
         )
     }
 }
+
+function mapStateToProps(state) {
+    const{ navbarLinks } = state.headerNavbar
+    return {
+        navbarLinks
+    }
+}
+Navbar = connect(mapStateToProps)(Navbar);
 
 export default Navbar;
