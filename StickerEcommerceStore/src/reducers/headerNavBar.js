@@ -6,18 +6,20 @@ import {
 const INITAL_STATE = {
     headerLinks: [
         {
-            title: 'yp'
+            title: 'youtube'
         },
         {
-            title: 'pus'
+            title: 'robertsspaceindustires'
         }
     ],
     navbarLinks: [
         {
-            title: 'account'
+            title: 'Account',
+            active: true
         },
         {
-            title: 'purchases'
+            title: 'Purchases',
+            active: false
         }
     ]
 }
