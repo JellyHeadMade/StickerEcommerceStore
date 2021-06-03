@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { SET_HEADER_LINKS } from '../../actions/types';
+
 import { connect } from 'react-redux';
+import * as actions from '../../actions';
 
 class Navbar extends Component {
     render() {
@@ -8,7 +9,7 @@ class Navbar extends Component {
             <div className='navbar'>
                 {this.props.navbarLinks.map((link, index) => {
                     return(
-                        <a className={` ${link.active ? 'green-text' : ''}`} key={index} onClick={() => console.log('tryed to switch tabs. ')}>
+                        <a className={`navbar__link ${link.active ? 'green-text' : ''}`} key={index} onClick={() => console.log('tryed to switch tabs. ')}>
                             {link.title}
                         </a>
                     )
