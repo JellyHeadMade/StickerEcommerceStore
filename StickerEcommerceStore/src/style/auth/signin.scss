@@ -1,10 +1,10 @@
 .sign-in {
-    grid-row: content-s/content-e;
+    // grid-row: content-s/content-e;
     grid-column: s/e;
 
-    // &__page-title {
+    &__page-title {
 
-    // }
+    }
 
     &__form {
         display: grid;
@@ -26,6 +26,7 @@
     }
     &__line {
         grid-row: line-s/line-e;
+        border-top: 1px solid #ccc;
     }
     &__login {
         margin-top: 39px;

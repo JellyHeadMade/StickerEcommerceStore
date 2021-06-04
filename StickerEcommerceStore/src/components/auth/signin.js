@@ -15,6 +15,7 @@ class SignIn extends React.Component {
 
     onSubmit = (Fields) => {
         console.log(Fields);
+        this.props.history.push('/account');
     }
 
     render() {

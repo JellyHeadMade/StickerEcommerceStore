@@ -12,15 +12,13 @@ html {
 }
 
 body {
-    overflow-x: hidden;
-    font-weight: normal;
     font-family: 'Open Sans';
     color: #808080;
 
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
-    // text-rendering: optimizeLegibility;
-    // -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
 }
 
 @import 'layout';
@@ -30,3 +28,6 @@ body {
 @import 'page-title.scss';
 @import 'form-fields.scss';
 @import 'details';
+@import './account/purchase-history.scss';
+@import './account/account-information.scss';
+@import './account/account.scss';
