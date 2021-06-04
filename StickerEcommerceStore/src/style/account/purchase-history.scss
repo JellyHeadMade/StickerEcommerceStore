@@ -3,7 +3,18 @@
     grid-row: content-s/content-e;
     grid-column: s/e;
 
-    // &__page-title {
+    &__page-title {
+        border-bottom: 1px solid #ccc;
+    }
+    &__bottom-border {
+        border-bottom: 1px solid #f2f2f2;
+    }
+}
 
-    // }
+.purchase{
+
+}
+
+.purchase-detail {
+
 }
