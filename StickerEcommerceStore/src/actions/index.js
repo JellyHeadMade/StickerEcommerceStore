@@ -4,8 +4,14 @@ import {
     changeNavbarActive
 } from './headernavbar';
 
+import {
+    fetchUserPurchases
+} from './users';
+
 export {
     setHeaderLinks,
     setNavbarLinks,
-    changeNavbarActive
+    changeNavbarActive,
+
+    fetchUserPurchases
 }; 
