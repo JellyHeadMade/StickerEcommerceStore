@@ -57,6 +57,7 @@ class AccountInformationForm extends React.Component {
                 placeholder='Zipcode'
                 title='Zipcode'
                 component={FormField} />
+                <div className='account-information-form__line'></div>
 
                 {
                     this.state.showPasswords ? 
@@ -78,7 +79,20 @@ class AccountInformationForm extends React.Component {
                         name='Confirm Password'
                         placeholder='Confirm Password'
                         title='confirm'
-                        component={FormField} />
+                        component={FormField} />,
+                        <Field key={3} className='account-information-form__update-information'
+                        onClick={() => this.setState({showPasswords : false})}
+                        type='submit'
+                        title='Update Information'
+                        name='update-information'
+                        component={FormButton}/>,
+                        <Field key={4} className='account-information-form__cancel'
+                        onClick={() => this.setState({showPasswords: false})}
+                        type='button'
+                        title='Cancel'
+                        name='cancel'
+                        gray={true}
+                        component={FormButton}/>
                     ]
                     :
                     <Field className='account-information-form__change-password'
