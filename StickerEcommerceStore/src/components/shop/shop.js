@@ -15,7 +15,8 @@ class Shop extends React.Component {
             
         ]
         this.props.setHeaderLinks(headerLinks);
-        this.props.fetchShopCatergories();
+        console.log(this.props.fetchShopCatergories)
+        this.props.fetchShopCategories();
     }
 
 
