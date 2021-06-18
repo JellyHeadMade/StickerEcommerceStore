@@ -2,6 +2,7 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
+
 class Shop extends React.Component {
 
     componentDidMount() {
@@ -15,7 +16,6 @@ class Shop extends React.Component {
             
         ]
         this.props.setHeaderLinks(headerLinks);
-        console.log(this.props.fetchShopCatergories)
         this.props.fetchShopCategories();
     }
 
@@ -30,7 +30,10 @@ class Shop extends React.Component {
 }
 
 function mapStateToProps(state) {
-    return {state}
+    const { categories } = state.shop;
+    return {
+        categories
+    } 
 }
 
 Shop = connect(mapStateToProps, actions)(Shop);

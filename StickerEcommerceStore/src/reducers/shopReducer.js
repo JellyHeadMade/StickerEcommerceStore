@@ -6,12 +6,13 @@ import {
 } from '../actions/types';
 
 const INITIAL_STATE = {
-    categories: [],
-    products: [],
-    filteredProducts: []
+    categories: []
+    // products: [],
+    // filteredProducts: []
 }
 
 export default function(state = INITIAL_STATE, action) {
+     console.log('reducer action type is ' + action.type);
     switch (action.type) {
         case SET_SHOP_CATEGORIES:
             const categories  = action.payload;
@@ -19,33 +20,7 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 categories
             }
-        case SET_SHOP_PRODUCTS:
-            return {
-                ...state,
-                products: action.payload
-            }
-        case FILTER_PRODUCTS_WITH_CATEGORY_ID:
-            var filteredProducts = [];
-            state.products.map(product => {
-                if(product.belongsTo.includes(action.payload)) {
-                    filteredProducts.push(product);
-                }
-            })
-            return {
-                ...state,
-                filteredProducts
-            }
-        case FILTER_PRODUCTS_WITH_QUERY: 
-            var filteredProducts = [];            
-            state.products.map(product => {
-                if(product.title.toLowerCase().includes(action.payload.query.toLowerCase())) {
-                    filteredProducts.push(product)
-                }
-            })
-            return {
-                ...state,
-                filteredProducts
-            }
         default: return state;
     }
+    console.log(categories + ' reducer catergories')
 }
