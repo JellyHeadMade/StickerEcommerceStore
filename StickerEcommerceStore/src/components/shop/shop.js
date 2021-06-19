@@ -17,6 +17,14 @@ class Shop extends React.Component {
         ]
         this.props.setHeaderLinks(headerLinks);
         this.props.fetchShopCategories();
+        this.props.fetchShopProducts();
+    }
+
+    shouldComponentUpdate(nextProps) {
+        if(this.props != nextProps ) {
+            this.props.setNavbarLinks(nextProps.categories, (_id) => this.props.filterProductsWithCatergoryId(_id));
+        }
+        return true
     }
 
 

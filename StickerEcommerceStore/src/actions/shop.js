@@ -1,12 +1,19 @@
 import {
-    // SET_SHOP_CATEGORIES
-    SET_NAVBAR_LINKS, SET_SHOP_PRODUCTS
+    SET_SHOP_CATEGORIES,
+    SET_NAVBAR_LINKS, SET_SHOP_PRODUCTS, FILTER_PRODUCTS_WITH_CATEGORY_ID
 } from './types';
 
+export function filterProductsWithCatergoryId(_id) {
+    console.log(_id);
+    return({
+        type: FILTER_PRODUCTS_WITH_CATEGORY_ID,
+        payload: _id
+    })
+}
+
 export function fetchShopCategories() {
-    console.log('hit 2 on actions')
     return ({
-        type: SET_NAVBAR_LINKS,
+        type: SET_SHOP_CATEGORIES,
         payload: [
             {
                 _id: 0,
@@ -38,7 +45,6 @@ export function fetchShopCategories() {
             },
         ]
     })
-    // console.log(payload);
 }
 
 export function fetchShopProducts() {
