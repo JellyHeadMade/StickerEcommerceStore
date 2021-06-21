@@ -30,6 +30,7 @@ class Shop extends React.Component {
 
     onSubmit = (fields) => {
         console.log(fields);
+        this.props.filterProductsWithQuery(fields)
     }
 
 
