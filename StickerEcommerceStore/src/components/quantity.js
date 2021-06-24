@@ -14,7 +14,7 @@ class Quantity extends React.Component {
                 <div className='quantity__plus'>
                     <FontAwesomeIcon className='' icon={faPlus} />
                 </div>
-                <div className='quantity_minus'>
+                <div className='quantity__minus'>
                     <FontAwesomeIcon className='' icon={faMinus} />
                 </div>
             </div>
