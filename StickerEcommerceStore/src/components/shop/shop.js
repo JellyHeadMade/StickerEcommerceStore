@@ -39,7 +39,7 @@ class Shop extends React.Component {
         return (
             <div className='shop'>
                 <ShopSearchBar className='shop__search-bar' onSubmit={this.onSubmit}/>
-                <div className='shop_products'>
+                <div className='shop__products'>
                     {
                         this.props.filteredProducts.map(product => {
                             return (
