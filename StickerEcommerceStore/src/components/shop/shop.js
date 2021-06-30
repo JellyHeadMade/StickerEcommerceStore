@@ -5,6 +5,9 @@ import * as actions from '../../actions';
 import ShopSearchBar from './shopSearchBar';
 import ShopProduct from './shopProduct';
 import ShopCart from './shopCart';
+import CartButton from './cartButton';
+import CartProduct from './cartProduct';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 class Shop extends React.Component {
 
@@ -43,6 +46,14 @@ class Shop extends React.Component {
         this.props.filterProductsWithQuery(fields)
     }
 
+    handleAddToCart = () => {
+        if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
+            document.getElementById('shop-cart').classList.remove('cart-hidden');
+        } else {
+            document.getElementById('shop-cart').classList.add('cart-hidden');
+        }
+    }
+
 
     render() {
         return (
@@ -60,6 +71,8 @@ class Shop extends React.Component {
                 {
                     this.state.showCart ? <ShopCart className='shop__cart'/> : ''
                 }
+
+                <CartButton onClick={this.handleAddToCart} className='shop__cart-button' icon={faCartPlus} />
             </div>
         )
     }
