@@ -4,8 +4,17 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import ShopSearchBar from './shopSearchBar';
 import ShopProduct from './shopProduct';
+import ShopCart from './shopCart';
 
 class Shop extends React.Component {
+
+    constructor() {
+        super() 
+
+        this.state = {
+            showCart: true
+        }
+    }
 
     componentDidMount() {
         //fetch products
@@ -48,6 +57,9 @@ class Shop extends React.Component {
                         })
                     }
                 </div>
+                {
+                    this.state.showCart ? <ShopCart className='shop__cart'/> : ''
+                }
             </div>
         )
     }
