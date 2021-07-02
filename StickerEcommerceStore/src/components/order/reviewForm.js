@@ -4,6 +4,7 @@ import { reduxForm, Field } from 'redux-form';
 import { FormButton } from '../formFields';
 import history from '../../history';
 import ReviewProducts from './reviewProducts';
+import GreenPriceTag from '../greenPriceTag';
 
 class ReviewForm extends React.Component {
     render() {
@@ -33,6 +34,24 @@ class ReviewForm extends React.Component {
                 name='Back'
                 gray={true}
                 component={FormButton}/>
+                <div className='review-form__details review-details'>
+                    <div className='review-details__subtotal review-detail'>
+                        <div className='review-detail__title'>Subtotal</div>
+                        <div className='review-detail__price'>$7.97</div>
+                    </div>
+                    <div className='review-details__tax review-detail'>
+                        <div className='review-detail__title'>Tax</div>
+                        <div className='review-detail__price'>$0.16</div>
+                    </div>
+                    <div className='review-details__shipping review-detail'>
+                        <div className='review-detail__title'>Shipping</div>
+                        <div className='review-detail__price'>$0.00</div>
+                    </div>
+                    <div className='review-details__total review-detail review-detail-green'>
+                        <div className='review-detail__title review-detail-green__title'>Total</div>
+                        <GreenPriceTag className='review-detail__price review-detail-green__price' title='8.13'/>
+                    </div>
+                </div>
 
             </form>
         )
