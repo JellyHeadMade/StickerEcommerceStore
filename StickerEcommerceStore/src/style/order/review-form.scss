@@ -44,20 +44,6 @@
     }
 }
 
-// .review-details{
-//     &__total {
-
-//     }
-
-//     &__tax {
-
-//     }
-
-//     &__shipping {
-
-//     }
-// }
-
 .review-detail {
     display: grid;
     grid-template-columns: [title-s] 1fr [title-e ] 65px [price-s] 1fr [price-e];
