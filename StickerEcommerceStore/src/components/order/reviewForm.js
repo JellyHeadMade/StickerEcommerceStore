@@ -11,17 +11,17 @@ class ReviewForm extends React.Component {
         const { className, handleSubmit } = this.props;    
     
         return ( 
-            <form onSubmit={handleSubmit} className={`${className} reivew-form`}>
+            <form onSubmit={handleSubmit} className={`${className} review-form`}>
                
-                <div className='reivew-form__line'></div>
-                <Field className='reivew-form__proceed'
-                onClick={() => history.push('/account')}
+                <div className='review-form__line'></div>
+                <Field className='review-form__proceed'
+                onClick={() => history.push('/signin')}
                 type='submit'
                 title='Proceed to Checkout'
                 name='proceed'
                 component={FormButton}/>
-                <Field className='reivew-form__back'
-                onClick={() => history.push('/signin')}
+                <Field className='review-form__back'
+                onClick={() => history.push('/shop')}
                 type='button'
                 title='Back'
                 name='Back'
